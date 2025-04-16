@@ -7,12 +7,12 @@ const CartDetails = () => {
   const discountPercentage = 15;
   const coupon = 0;
   const deliveryCharges = totalAmount > 600 ? 0 : 69 ;
-  const packagingFee = overAllQuantity*5 > 100 ? 0 : overAllQuantity*5;
+  const packagingFee = overAllQuantity > 15 ? 0 : overAllQuantity*5;
 
   const discountResult = (totalAmount * discountPercentage) / 100;
   let discount = (discountResult % 1) > 0.50 ? Math.ceil(discountResult) : Math.floor(discountResult);
 
-  const savings = discount + coupon + (packagingFee === 0 ? 100 : 0)+deliveryCharges;
+  const savings = discount + coupon + (packagingFee === 0 ? 100 : 0) + (deliveryCharges === 0 ? 69 : 0);
   const overAllTotalAmount = (totalAmount - discount - coupon) + deliveryCharges + packagingFee;
 
   const priceDetails = {
