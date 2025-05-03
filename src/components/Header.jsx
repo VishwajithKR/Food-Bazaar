@@ -36,7 +36,7 @@ switch (role) {
     menuData1.splice(3, 0, { id:7, name: "Syllabus", link: "/syllabus" });
     break;
   case "admin":
-    menuData1.splice(2, 0, {id:8, name: "/management", label: "Management" });
+    menuData1.splice(2, 0, {id:8, name: "Management", label: "Management" });
     menuData1.splice(3, 0, {id:9, name: "Student's List", label: "/users" });
     break;
  
@@ -53,7 +53,7 @@ switch (role) {
       menuItems2.splice(1, 0,  { path: "/cart", icon: cartIcon, bgColor: "bg-green-500/10", borderColor: "border-green-500", title: "cart" ,count:cartListData.length },);
       break;
     case "admin":
-      menuItems2.splice(3, 0, { path: "/about", icon: logoutIcon, bgColor: "bg-red-500/10", borderColor: "border-red-500/50", title: "logout",count:0 });
+      menuItems2.splice(1, 0, { path: "/about", icon: logoutIcon, bgColor: "bg-blue-500/10", borderColor: "border-blue-500/50", title: "logout",count:0 });
       break;
   }
       const permission = useSelector((state) => state.user.token);

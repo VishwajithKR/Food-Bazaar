@@ -27,7 +27,7 @@ const CartDetails = () => {
   };
 
   return (
-    <section className="flex flex-col shadow-lg w-[300px] h-[406px] overflow-hidden text-lg ">
+    <section className="flex flex-col shadow-lg w-[300px] h-[406px] sticky top-[180px] mb-11 overflow-hidden text-lg ">
       <h1 className="border-b border-black/10 uppercase px-4 py-3 text-lg font-[500] text-black/50">
         Price Details
       </h1>
